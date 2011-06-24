@@ -3,3 +3,4 @@
 local-init.php
 .settings
 *~
+.DS_Store

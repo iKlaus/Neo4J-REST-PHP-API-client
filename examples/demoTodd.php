@@ -1,18 +1,27 @@
 <?php
-/**
- *	Include the API PHP file
- */
-require('php-neo-rest.php');
 
 /**
- *	Create a graphDb connection 
- *	Note:	this does not actually perform any network access, 
- *			the server is only accessed when you use the database
+ *  Include the API PHP file
  */
-$graphDb = new GraphDatabaseService('http://localhost:9999/');
+require_once '../lib/HTTPUtil.class.php';
+require_once '../lib/HttpException.class.php';
+require_once '../lib/NotFoundException.class.php';
+require_once '../lib/PropertyContainer.class.php';
+require_once '../lib/Node.class.php';
+require_once '../lib/Relationship.class.php';
+require_once '../lib/GraphDatabaseService.class.php';
+require_once '../lib/IndexService.class.php';
+require_once '../lib/Direction.class.php';
 
 /**
- *	Try the traversal.
+ *  Create a graphDb connection 
+ *  Note: this does not actually perform any network access, 
+ *      the server is only accessed when you use the database
+ */
+$graphDb = new GraphDatabaseService('http://localhost:7474/db/data/');
+
+/**
+ *  Try the traversal.
  */
 $firstNode = $graphDb->getNodeById(1);
 $secondNode = $graphDb->getNodeById(2);
