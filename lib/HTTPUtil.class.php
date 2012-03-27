@@ -10,7 +10,7 @@ class HTTPUtil
   const PUT = 'PUT';
   const DELETE = 'DELETE';
   
-  const DEBUGGING = true;
+  const DEBUGGING = false;
   
   /**
    *  A general purpose HTTP request method
